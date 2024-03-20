@@ -27,9 +27,6 @@ class _DrawVideoFullViewState extends State<DrawVideoFullView> {
 
   MethodChannel? _channel;
 
-  //广告是否显示
-  bool _isShow = true;
-
   @override
   void initState() {
     super.initState();

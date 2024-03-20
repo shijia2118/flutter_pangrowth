@@ -24,9 +24,6 @@ class _NewsTabsViewState extends State<NewsTabsView> {
 
   MethodChannel? _channel;
 
-  //广告是否显示
-  bool _isShow = true;
-
   @override
   void initState() {
     super.initState();

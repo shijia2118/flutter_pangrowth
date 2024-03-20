@@ -1,3 +1,5 @@
+// ignore_for_file: provide_deprecation_message
+
 part of 'flutter_pangrowth.dart';
 
 /// @Author: gstory

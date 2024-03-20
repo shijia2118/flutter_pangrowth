@@ -67,6 +67,10 @@ import 'package:flutter_pangrowth/flutter_pangrowth.dart';
 ### [短视频使用文档](https://github.com/gstory0404/flutter_pangrowth/blob/master/doc/video.md)
 ### [短剧使用文档](https://github.com/gstory0404/flutter_pangrowth/blob/master/doc/playlet.md)
 
+## 注意
+### IOS端项目，除了在ios目录下导入pangrowthconfig.json之外。还必须在xcode的 Copy Bundle Resources 里添加pangrowthconfig.json文件。具体位置在:
+### 项目Target -> Build Phases -> Copy Bundle Resources
+
 ## 插件链接
 
 |插件|地址|

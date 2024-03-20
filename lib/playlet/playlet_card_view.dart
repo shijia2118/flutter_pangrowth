@@ -10,9 +10,9 @@ import 'package:flutter/services.dart';
 class PlayletCardView extends StatefulWidget {
   final double width;
   final double height;
-  bool? autoPlay;
-  bool? loop;
-  bool? mute;
+  final bool? autoPlay;
+  final bool? loop;
+  final bool? mute;
 
   ///# 短剧卡片
   ///- [width] 宽 (根据宽返回 高:宽`为`16:9` 的视频，加载完成后flutter widget会自动适配原生返回视频大小，这里高度可能会与设置的height不一致)
@@ -20,13 +20,7 @@ class PlayletCardView extends StatefulWidget {
   ///- [autoPlay] 是否自动播放，默认true
   ///- [loop] 是否是否循环播放播放，默认true
   ///- [mute] 是否静音，默认true
-  PlayletCardView(
-      {Key? key,
-      required this.width,
-      required this.height,
-      this.autoPlay,
-      this.loop,
-      this.mute})
+  const PlayletCardView({Key? key, required this.width, required this.height, this.autoPlay, this.loop, this.mute})
       : super(key: key);
 
   @override
@@ -100,7 +94,7 @@ class _PlayletCardViewState extends State<PlayletCardView> {
       //显示广告
       case "onShow":
         Map map = call.arguments;
-        print(map);
+        debugPrint(map.toString());
         if (mounted) {
           setState(() {
             _width = map["width"];

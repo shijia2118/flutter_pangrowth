@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pangrowth/playlet/PlayletCardView.dart';
+import 'package:flutter_pangrowth/playlet/playlet_card_view.dart';
 
 /// @Author: gstory
 /// @CreateDate: 2023/10/10 15:08
@@ -19,7 +19,7 @@ class _PlayletCardPageState extends State<PlayletCardPage> {
       appBar: AppBar(
         title: const Text('短剧卡片'),
       ),
-      body: Center(
+      body: const Center(
         child: PlayletCardView(
           //宽 (根据宽返回 高:宽`为`16:9` 的视频，加载完成后flutter widget会自动适配原生返回视频大小，这里高度可能会与设置的height不一致)
           width: 400,

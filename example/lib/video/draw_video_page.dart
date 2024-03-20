@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_pangrowth/flutter_pangrowth.dart';
 
@@ -22,6 +20,7 @@ class _DrawVideoPageState extends State<DrawVideoPage>
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Container(
       child: PangrowthVideo.drawVideoFullView(
         viewWidth: MediaQuery.of(context).size.width,

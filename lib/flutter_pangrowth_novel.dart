@@ -100,7 +100,7 @@ class PangrowthNovel{
     dynamic data = await FlutterPangrowth.pangrowthChannel.invokeMethod("getNovelRecommendFeed", {
       "size": size,
     });
-    print("结果 =》$data");
+    debugPrint("结果 =》$data");
     return NovelEntity.fromJson(Map<String, dynamic>.from(data));
   }
 
@@ -182,13 +182,13 @@ class PangrowthNovel{
     required int offset,
     required int limit,
   }) async {
-    print("开始搜索$queryContent");
+    debugPrint("开始搜索$queryContent");
     dynamic data = await FlutterPangrowth.pangrowthChannel.invokeMethod("searchNovelResults", {
       "queryContent": queryContent,
       "offset": offset,
       "limit": limit,
     });
-    print("搜索结果$data");
+    debugPrint("搜索结果$data");
     return NovelEntity.fromJson(Map<String, dynamic>.from(data));
   }
 

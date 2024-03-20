@@ -1,7 +1,4 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_pangrowth/flutter_pangrowth.dart';
 import 'package:flutter_pangrowth_example/video/draw_video_page.dart';
 import 'package:flutter_pangrowth_example/video/grid_video_page.dart';
 
@@ -20,9 +17,9 @@ class VideoInPage extends StatefulWidget {
 class _VideoInPageState extends State<VideoInPage> {
   int _currentIndex = 0;
 
-  List<Widget> _pageList = [
-    DrawVideoPage(),
-    GridVideoPage(),
+  final List<Widget> _pageList = [
+    const DrawVideoPage(),
+    const GridVideoPage(),
   ];
 
   final List<BottomNavigationBarItem> _barItem = [
@@ -36,14 +33,14 @@ class _VideoInPageState extends State<VideoInPage> {
       appBar: AppBar(
         title: const Text("Flutter页面中插入视频新闻界面"),
       ),
-      body: this._pageList[this._currentIndex],
+      body: _pageList[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (int index) {
           setState(() {
-            this._currentIndex = index;
+            _currentIndex = index;
           });
         },
-        currentIndex: this._currentIndex,
+        currentIndex: _currentIndex,
         items: _barItem,
         fixedColor: Colors.pink,
         selectedFontSize: 12,

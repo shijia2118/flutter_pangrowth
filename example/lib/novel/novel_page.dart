@@ -116,7 +116,7 @@ class _NovelPageState extends State<NovelPage> {
               child: const Text('阅读历史'),
               onPressed: () async {
                 Navigator.push(context, MaterialPageRoute(builder: (_) {
-                  return NovelRecommendPage(type: "hisotry");
+                  return const NovelRecommendPage(type: "hisotry");
                 }));
               },
             ),
@@ -127,7 +127,7 @@ class _NovelPageState extends State<NovelPage> {
               child: const Text('启动后推荐书列表'),
               onPressed: () async {
                 Navigator.push(context, MaterialPageRoute(builder: (_) {
-                  return NovelRecommendPage(type: "feedV1");
+                  return const NovelRecommendPage(type: "feedV1");
                 }));
               },
             ),
@@ -138,7 +138,7 @@ class _NovelPageState extends State<NovelPage> {
               child: const Text('Feed推荐书列表'),
               onPressed: () async {
                 Navigator.push(context, MaterialPageRoute(builder: (_) {
-                  return NovelRecommendPage(type: "feed");
+                  return const NovelRecommendPage(type: "feed");
                 }));
               },
             ),

@@ -15,7 +15,6 @@ import 'package:flutter_pangrowth/video/video_news_single_card_view.dart';
 import 'package:flutter_pangrowth/video/video_single_card_view.dart';
 import 'package:flutter_pangrowth/video/video_textchain_view.dart';
 import 'package:flutter_pangrowth/video/video_bubble_view.dart';
-import 'package:flutter_pangrowth/playlet/PlayletCardView.dart';
 
 import 'entity/novel_entity.dart';
 

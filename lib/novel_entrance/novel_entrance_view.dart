@@ -27,12 +27,10 @@ class NovelEntranceView extends StatefulWidget {
 
 class _NovelEntranceViewState extends State<NovelEntranceView> {
 
-  String _viewType = "com.gstory.flutter_pangrowth/NovelEntranceView";
+  final String _viewType = "com.gstory.flutter_pangrowth/NovelEntranceView";
 
   MethodChannel? _channel;
 
-  //广告是否显示
-  bool _isShow = true;
 
   @override
   void initState() {

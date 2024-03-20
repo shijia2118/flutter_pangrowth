@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_pangrowth/flutter_pangrowth.dart';
 
@@ -23,6 +21,7 @@ class _DrawVideoPageState extends State<GridVideoPage> with AutomaticKeepAliveCl
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Container(
       child: PangrowthVideo.gridVideoView(
           viewWidth: MediaQuery.of(context).size.width, viewHeight: 700),

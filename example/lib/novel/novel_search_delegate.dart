@@ -11,11 +11,11 @@ class SearchNovelDelegate extends SearchDelegate<String> {
   List<Widget> buildActions(BuildContext context) {
     return [
       TextButton(
-        child: Text("搜索"),
+        child: const Text("搜索"),
         onPressed: () => {showResults(context)},
       ),
       IconButton(
-        icon: Icon(Icons.clear),
+        icon: const Icon(Icons.clear),
         onPressed: () => query = "",
       ),
     ];
@@ -44,18 +44,14 @@ class SearchNovelDelegate extends SearchDelegate<String> {
             return Container();
           // 连接到异步任务并等待进行交互
           case ConnectionState.active:
-            return Container(
-              child: const Center(
-                child: Text("加载数据中..."),
-              ),
+            return const Center(
+              child: Text("加载数据中..."),
             );
           // 连接到异步任务并开始交互
           case ConnectionState.done:
             if (snapshot.hasError) {
-              return Container(
-                child: const Center(
-                  child: Text("加载数据失败"),
-                ),
+              return const Center(
+                child: Text("加载数据失败"),
               );
             } else if (snapshot.hasData) {
               if (snapshot.data!.data != null) {
@@ -71,7 +67,7 @@ class SearchNovelDelegate extends SearchDelegate<String> {
                         },
                         child: Container(
                           padding:
-                          EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                          const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                           child: Row(
                             children: [
                               Image.network(
@@ -82,7 +78,7 @@ class SearchNovelDelegate extends SearchDelegate<String> {
                               ),
                               Expanded(
                                 child: Container(
-                                  margin: EdgeInsets.only(
+                                  margin: const EdgeInsets.only(
                                       left: 16, top: 4, bottom: 4),
                                   height: 120,
                                   child: Text(
@@ -118,10 +114,8 @@ class SearchNovelDelegate extends SearchDelegate<String> {
             return Container();
           case ConnectionState.done:
             if (snapshot.hasError) {
-              return Container(
-                child: const Center(
-                  child: Text("加载数据失败"),
-                ),
+              return const Center(
+                child: Text("加载数据失败"),
               );
             } else if (snapshot.hasData) {
               if (snapshot.data!.data != null) {

@@ -49,7 +49,7 @@ class _PlayletPageState extends State<PlayletPage> {
           FlutterUnionadNetCode.NETWORK_STATE_4G,
           FlutterUnionadNetCode.NETWORK_STATE_WIFI
         ]); //允许直接下载的网络状态集合 选填
-    print("广告初始化结果--> $_adRegister");
+    debugPrint("广告初始化结果--> $_adRegister");
     _isRegister = await PangrowthVideo.registerVideo(
       //接入小说SDK的App的英文名 必填
       appName: "appName",
@@ -62,6 +62,7 @@ class _PlayletPageState extends State<PlayletPage> {
     setState(() {});
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -129,7 +130,7 @@ class _PlayletPageState extends State<PlayletPage> {
               child: const Text('短剧卡片'),
               onPressed: () async {
                 Navigator.push(context, MaterialPageRoute(builder: (_) {
-                  return PlayletCardPage();
+                  return const PlayletCardPage();
                 }));
               },
             ),

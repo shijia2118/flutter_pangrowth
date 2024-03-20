@@ -53,7 +53,7 @@ class _VideoPageState extends State<VideoPage> {
           FlutterUnionadNetCode.NETWORK_STATE_4G,
           FlutterUnionadNetCode.NETWORK_STATE_WIFI
         ]); //允许直接下载的网络状态集合 选填
-   print("广告初始化结果--> $_adRegister");
+   debugPrint("广告初始化结果--> $_adRegister");
     _isRegister = await PangrowthVideo.registerVideo(
       //接入小说SDK的App的英文名 必填
       appName: "appName",
@@ -111,7 +111,7 @@ class _VideoPageState extends State<VideoPage> {
               onPressed: () async {
                 if(Platform.isIOS){
                   Navigator.push(context, MaterialPageRoute(builder: (_) {
-                    return VideoInPage();
+                    return const VideoInPage();
                   }));
                 }
               },
@@ -123,7 +123,7 @@ class _VideoPageState extends State<VideoPage> {
               child: const Text('视频组件'),
               onPressed: () async {
                 Navigator.push(context, MaterialPageRoute(builder: (_) {
-                  return VideoAssemblyPage();
+                  return const VideoAssemblyPage();
                 }));
               },
             ),
@@ -134,7 +134,7 @@ class _VideoPageState extends State<VideoPage> {
               child: const Text('视频卡片'),
               onPressed: () async {
                 Navigator.push(context, MaterialPageRoute(builder: (_) {
-                  return VideoCardPage();
+                  return const VideoCardPage();
                 }));
               },
             ),

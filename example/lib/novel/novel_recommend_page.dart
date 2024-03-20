@@ -8,9 +8,9 @@ import 'package:flutter_pangrowth/flutter_pangrowth.dart';
 
 class NovelRecommendPage extends StatefulWidget {
 
-  String type;
+  final String type;
 
-  NovelRecommendPage({Key? key,required this.type}) : super(key: key);
+  const NovelRecommendPage({Key? key,required this.type}) : super(key: key);
 
   @override
   _NovelRecommendV1State createState() => _NovelRecommendV1State();
@@ -49,18 +49,14 @@ class _NovelRecommendV1State extends State<NovelRecommendPage> {
               return Container();
             // 连接到异步任务并等待进行交互
             case ConnectionState.active:
-              return Container(
-                child: const Center(
-                  child: Text("加载数据中..."),
-                ),
+              return const Center(
+                child: Text("加载数据中..."),
               );
             // 连接到异步任务并开始交互
             case ConnectionState.done:
               if (snapshot.hasError) {
-                return Container(
-                  child: const Center(
-                    child: Text("加载数据失败"),
-                  ),
+                return const Center(
+                  child: Text("加载数据失败"),
                 );
               } else if (snapshot.hasData) {
                 if (snapshot.data!.data != null) {
